@@ -40,10 +40,24 @@ if (dice !== 1) {
         roundScore += dice;
         document.querySelector('#current-' + activePlayer).textContent = roundScore;
     } else {
-        //Next player
+        //Next player use ternary operator 
         activePlayer ===0 ? activePlayer = 1: activePlayer = 0;
-// 7:07
-    }
+        //line above says this if active player 0 then <?>  active player should be 1  else <:> active player should be 0;
+        roundScore = 0; 
+        
+        document.getElementById ('current-0').textContent = '0';
+        document.getElementById ('current-1').textContent = '0';
+
+        document.querySelector('.player-0-panel').classList.toggle('active');
+        document.querySelector('.player-1-panel').classList.toggle('active');
+       // document.querySelector('.player-0-panel').classList.remove('active');
+        //document.querySelector('.player-1-panel').classList.add('active');
+
+                document.querySelector('dice').style.display='none';
+
+                
+        
+}
 
 
 });
